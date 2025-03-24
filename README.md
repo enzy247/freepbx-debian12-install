@@ -16,7 +16,7 @@ apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-
 apt -y install git vim curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev uuid-dev expect
 ```
 
-## 2. Установка PHP 8.2
+## 2. Установка PHP 8.3
 
 # Добавление нового PGP-ключа и обновление репозитория
 
