@@ -18,14 +18,60 @@ apt -y install git vim curl wget libnewt-dev libssl-dev libncurses5-dev subversi
 
 ## 2. Установка PHP 8.2
 
-### Удаление старых версий PHP (если есть)
+# Добавление нового PGP-ключа и обновление репозитория
+
+## Добавление нового ключа PGP
+
+Автор репозитория сменил PGP-ключи. Для загрузки нового ключа рекомендуется использовать анонимайзер, прокси или VPN.
+
+### Способы скачивания ключа:
+
+1. **Прямая загрузка** (требуется VPN/прокси):
+   ```
+   https://packages.sury.org/php/apt.gpg
+   ```
+
+2. **Альтернативный источник** (Яндекс.Диск):
+   ```
+   https://disk.yandex.ru/d/ZxgB_kRu-mwqGg
+   ```
+
+### Установка ключа:
+
+1. Загрузите файл `apt.gpg` на сервер
+2. Скопируйте его в домашнюю директорию
+3. Выполните команду:
+
 ```bash
-apt-get purge php7.* php8.0 php8.1
+sudo mv ~/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
 ```
 
-### Установка PHP 8.2 и компонентов
+> **Примечание:** Ключ успешно установлен после выполнения команды.
+
+## Проверка и обновление репозитория
+
+1. Обновите список пакетов:
+
 ```bash
-apt-get install -y build-essential linux-headers-`uname -r` openssh-server apache2 mariadb-server mariadb-client bison flex php8.2 php8.2-curl php8.2-cli php8.2-common php8.2-mysql php8.2-gd php8.2-mbstring php8.2-intl php8.2-xml php-pear curl sox libncurses5-dev libssl-dev mpg123 libxml2-dev libnewt-dev sqlite3 libsqlite3-dev pkg-config automake libtool autoconf git unixodbc-dev uuid uuid-dev libasound2-dev libogg-dev libvorbis-dev libicu-dev libcurl4-openssl-dev odbc-mariadb libical-dev libneon27-dev libsrtp2-dev libspandsp-dev sudo subversion libtool-bin python-dev-is-python3 unixodbc vim wget libjansson-dev software-properties-common nodejs npm ipset iptables fail2ban php-soap
+sudo apt update
+```
+
+2. Попробуйте установить PHP 8.3:
+
+```bash
+sudo apt install php8.3
+```
+
+## Устранение возможных проблем
+
+Если возникают ошибки при выполнении `apt update`, проверьте:
+- Правильность установки PGP-ключа
+- Доступность репозиториев
+- Наличие интернет-соединения
+
+Для дополнительной проверки ключа выполните:
+```bash
+apt-key list
 ```
 
 ## 3. Установка Asterisk 21
