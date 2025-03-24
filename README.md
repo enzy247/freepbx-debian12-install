@@ -161,6 +161,7 @@ cd /usr/local/src/freepbx/
 
 ## 7. Установка модулей и завершение настройки
 ```bash
+fwconsole ma disablerepo commercial
 fwconsole ma installall
 fwconsole reload
 fwconsole restart
