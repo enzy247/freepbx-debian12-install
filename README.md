@@ -11,7 +11,7 @@ sudo -i bash -c 'apt up && apt ug -y'
 
 ### Установка необходимых зависимостей
 ```bash
-apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 vim expect
+apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 expect
 ```
 
 ## 2. Установка PHP 8.3
