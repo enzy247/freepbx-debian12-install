@@ -41,7 +41,7 @@ apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-
 3. Выполните команду:
 
 ```bash
-sudo mv ~/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
+mv ~/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
 ```
 
 > **Примечание:** Ключ успешно установлен после выполнения команды.
@@ -51,13 +51,13 @@ sudo mv ~/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
 1. Обновите список пакетов:
 
 ```bash
-sudo apt update
+apt update
 ```
 
 2. Попробуйте установить PHP 8.3:
 
 ```bash
-apt-get install -y linux-headers-`uname -r` openssh-server apache2 mariadb-server mariadb-client bison flex php8.3 php8.3-curl php8.3-cli php8.3-common php8.3-mysql php8.3-gd php8.3-mbstring php8.3-intl php8.3-xml php-pear sox pkg-config automake libtool autoconf unixodbc-dev uuid uuid-dev libasound2-dev libogg-dev libvorbis-dev libicu-dev libcurl4-openssl-dev odbc-mariadb libical-dev libneon27-dev libsrtp2-dev libspandsp-dev sudo libtool-bin python-dev-is-python3 unixodbc software-properties-common nodejs npm ipset iptables fail2ban php8.3-soap
+apt-get install -y linux-headers-`uname -r` openssh-server apache2 mariadb-server mariadb-client bison flex php8.3 php8.3-curl php8.3-cli php8.3-common php8.3-mysql php8.3-gd php8.3-mbstring php8.3-intl php8.3-xml php-pear sox pkg-config automake libtool autoconf unixodbc-dev uuid uuid-dev libasound2-dev libogg-dev libvorbis-dev libicu-dev libcurl4-openssl-dev odbc-mariadb libical-dev libneon27-dev libsrtp2-dev libspandsp-dev libtool-bin python-dev-is-python3 unixodbc software-properties-common nodejs npm ipset iptables fail2ban php8.3-soap
 ```
 
 ## Устранение возможных проблем
