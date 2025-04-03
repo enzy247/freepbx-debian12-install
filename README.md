@@ -21,11 +21,12 @@ apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-
 ## Добавление нового ключа PGP
 
 Автор репозитория сменил PGP-ключи. Для загрузки нового ключа рекомендуется использовать анонимайзер, прокси или VPN.
-
+```bash
 sudo apt install apt-transport-https
 sudo curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
 sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 sudo apt update
+```
 
 1. Обновите список пакетов:
 
