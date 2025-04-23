@@ -13,7 +13,10 @@ sudo -i bash -c 'apt up && apt ug -y'
 ```bash
 apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 expect
 ```
+### Удаление ненужных пакетов 
+```bash 
 
+```
 ## 2. Установка PHP 8.3
 
 # Добавление нового PGP-ключа и обновление репозитория
@@ -26,7 +29,6 @@ curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/ph
 sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 apt update
 ```
-
 1. Обновите список пакетов:
 
 ```bash
@@ -161,4 +163,10 @@ EOF
 
 systemctl daemon-reload
 systemctl enable freepbx
+```
+## 9. Удаление ненужных пакетов
+
+```bash
+apt-get remove -y build-essential git subversion bison flex pkg-config automake libtool autoconf libnewt-dev libncurses5-dev libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev python-dev-is-python3 unixodbc-dev htop sngrep expect && apt-get clean && apt-get autoremove -y && rm -rf /usr/src/asterisk-*/ && rm -f /usr/src/asterisk-*.tar.gz && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+apt remove --purge -y apt-transport-https && apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists/*
 ```
