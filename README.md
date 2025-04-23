@@ -13,10 +13,7 @@ sudo -i bash -c 'apt up && apt ug -y'
 ```bash
 apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 expect
 ```
-### Удаление ненужных пакетов 
-```bash 
 
-```
 ## 2. Установка PHP 8.3
 
 # Добавление нового PGP-ключа и обновление репозитория
